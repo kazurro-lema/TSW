@@ -1,0 +1,25 @@
+// medias queries from fxLayout
+
+$lt-sm: 599px;
+$lt-md: 959px;
+$lt-lg: 1279px;
+$lt-xl: 1919px;
+$xl: 5000px;
+
+@mixin lesser($min) {
+  @media (min-width: $min) {
+    @content;
+  }
+}
+
+@mixin higher($max) {
+  @media (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin betweenValues($min, $max) {
+  @media ((min-width: $min) and (max-width: $max)) {
+    @content;
+  }
+}
